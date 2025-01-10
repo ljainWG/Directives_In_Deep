@@ -3,7 +3,7 @@ import { Permission } from './auth.model';
 import { AuthService } from './auth.service';
 
 @Directive({
-  selector: 'p[appCustomDirective]',
+  selector: '[appCustomDirective]',
   standalone: true
 })
 export class CustomDirective {
