@@ -4,4 +4,13 @@
   <hr />
 
   <app-auth />
+  @if(isAdmin()){
+  <p>Only Admin can see this</p>
+  }
+  @else if(isUser()){
+  <p>Only User can see this</p>
+  }
+  @else{
+  <p>Please LogIn, you are a guest for now</p>
+  }
 </main>
