@@ -13,8 +13,15 @@
   @else{
   <p>Please LogIn, you are a guest for now</p>
   } -->
-  <ng-template appCustomDirective='admin'>
-    <!-- ng-template is a special element can be used with our component to wrape some content which should not be intially rendered, we can control it and make it work as we want to, and it is compulsory for creating a structural directive and attach ng-template with the custom strucutral directive name as attribute-->
+
+  <!-- <ng-template appCustomDirective='admin'>
     <p>Only Admin can see this</p>
-  </ng-template>
+  </ng-template> -->
+  <!-- ng-template is a special element can be used with our component to wrape some content which should not be intially rendered, we can control it and make it work as we want to, and it is compulsory for creating a structural directive and attach ng-template with the custom strucutral directive name as attribute-->
+
+  <p *appCustomDirective='"admin"' class="protected-content admin">Only admin can see this</p>
+  <p *appCustomDirective='"user"' class="protected-content authenticated">Only normal user can see this</p>
+  <p *appCustomDirective='"guest"' class="protected-content unauthenticated">Only guest will see this</p>
+
+
 </main>
