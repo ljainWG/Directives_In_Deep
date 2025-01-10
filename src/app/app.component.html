@@ -4,7 +4,7 @@
   <hr />
 
   <app-auth />
-  @if(isAdmin()){
+  <!-- @if(isAdmin()){
   <p>Only Admin can see this</p>
   }
   @else if(isUser()){
@@ -12,5 +12,6 @@
   }
   @else{
   <p>Please LogIn, you are a guest for now</p>
-  }
+  } -->
+  <p appCustomDirective='admin'>Only Admin can see this</p>
 </main>
